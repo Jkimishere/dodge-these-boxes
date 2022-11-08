@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+:root{
+  --player: 50%;
+}
+.App {
+  text-align: center;
+  background-color: #303030;
+  font-family: 'Quicksand', sans-serif;
+}
+body{
+  background-color: #303030;
+  color:#deb887;
+  overflow-x: hidden;
+  overflow-y:hidden;
+}
+h1,h2,h3,p{
+  font-weight: 300;
+}
+.play-button{
+  background-color: #303030;
+  border-radius: 20px;
+  width: 200px;
+  height: 100px;
+  border: 2px solid burlywood;
+  margin: 0 auto;
+  margin-top: 50px;
+  cursor: pointer;
+  color:burlywood;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
+}
+
+.play-button:hover{
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+
+}
+.clicked{
+  animation:fadeDown 1.5s 0s forwards;
+}
+.game{
+  width: 100vw;
+  height: 100vh;
+}
+.player{
+  width: 7vw;
+  height: 7vw;
+  background-color: burlywood;
+  border-radius: 10px;
+  position: absolute;
+  top: 70%;
+  left: var(--player);
+  transform: translateX(-50%);
+}
+.box{
+  width: 7vw;
+  height: 7vw;
+  background-color: burlywood;
+  border-radius: 10px;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  transform: translateX(-50%);
+  animation: moveDown 1.2s infinite ease-in;
+}
+img{
+  width: 7vw;
+  height: 7vw;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+}
+.one{
+  left: 30%;
+}
+.two{
+  left: 40%;
+}
+.three{
+  left: 50%;
+}
+.four{
+  left: 60%;
+}
+.five{
+  left: 70%;
+}
+.invis{
+  opacity: 0;
+}
+.score{
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome, Edge, Opera and Firefox */
+                                font-family: 'Press Start 2P', cursive;
+}
+
+
+
+@keyframes fadeDown {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+}
+
+@keyframes moveDown{
+  0%{
+    top: 20%;
+  }
+  100%{
+    top: 70%;
+  }
+}
